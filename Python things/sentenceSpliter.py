@@ -26,7 +26,8 @@ def split_sentence(string):
         word = ""
 
 
-# running test
+# running test.
 split_sentence("hi my name is nihal")
 print(words_list)
- 
+
+# not working as imagined
