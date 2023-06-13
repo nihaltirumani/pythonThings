@@ -1,4 +1,4 @@
-#pateren maker
+#pateren maker with 1's and 0's
 x=0
 y=9
 while not x==10:

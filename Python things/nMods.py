@@ -118,15 +118,6 @@ def random_joke():
     print(list_of_jokes[random.randint(0, len(list_of_jokes)-1)])
 
 
-def pateren_of_1and0():
-    x=0
-    y=9
-    while not x==10:
-        print(x*"0"+"1"+y*"0")
-        x+=1
-        y-=1
-
-
 def random_equation():
     import random
 
@@ -174,10 +165,22 @@ def random_equation():
 
 
 def math_quiz():
+    # Importing modules.
     import random
     import time
-    index = 1
 
+    # Varibles.
+    index = 1
+    operator = ""
+    num1 = ""
+    num2 = ""
+    random_number = 0
+    question = ""
+    answer = ""
+    user_answer = ""
+    correct_answers = 0
+
+    # Greeting the user and explaining about the game.
     print("Welcome to maths quiz!")
     time.sleep(1)
     print("There are ten equations.")
@@ -196,8 +199,10 @@ def math_quiz():
     time.sleep(1)
     print("Go!")
 
+    # Game engine.
     while index < 11:
 
+        # Generating a random operator.
         random_number = random.randint(1, 4)
 
         if random_number == 1:
@@ -208,11 +213,13 @@ def math_quiz():
             operator = "*"
         elif random_number == 4:
             operator = "/"
-
+        
+        # Generating the question.
         num1 = str(random.randint(1, 25))
         num2 = str(random.randint(1, 25))
         question = "Answer the equation: " + num1 + " " + operator + " " + num2 + " " + "=" + " "
-
+        
+        # Asking the user to answer.
         num1 = int(num1)
         num2 = int(num2)
 
@@ -222,7 +229,8 @@ def math_quiz():
         except ValueError:
             print("Enter a number, not letters")
             quit()
-
+        
+        # Checking if the user answer is right or not.
         if operator == "+":
             answer = num1 + num2
         if operator == "-":
@@ -235,7 +243,6 @@ def math_quiz():
         if operator == "/":
             user_answer = float(user_answer)
 
-        correct_answers = 0
         if answer == user_answer:
             print("Correct answer!")
             correct_answers += 1
@@ -250,11 +257,13 @@ def math_quiz():
 
 def random_game_idea():
     import random
+
     list_of_types0 = ["Cool", "Boring", "Useful"]
     list_of_types1 = ["Input", "Non-input"]
     list_of_types2 = ["AI", "manual"]
     list_of_types3 = ["Fun", "Next level", "Awesome"]
     list_of_types4 = ["No modules", "Random", "Time", "Random and time"]
+
     print(list_of_types0[random.randint(0,2)])
     print(list_of_types1[random.randint(0,1)])
     print(list_of_types2[random.randint(0,1)])
