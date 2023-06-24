@@ -5,10 +5,17 @@ def split_words(string):
         index += 1
 
 
-def random_colour_teller():
-    import random
-    color=["red","yellow","orange","green","blue","voilet","purple","white","black","cyan","gray","pink","brown","maroon","silver","gold"]
-    print(random.choice(color))
+def random_colour_teller(pr):
+    if pr == "print":
+        import random
+        color=["red","yellow","orange","green","blue","voilet","purple","white","black","cyan","gray","pink","brown","maroon","silver","gold"]
+        print(random.choice(color))
+    elif pr == "return":
+        import random
+        color=["red","yellow","orange","green","blue","voilet","purple","white","black","cyan","gray","pink","brown","maroon","silver","gold"]
+        return random.choice(color)
+    else:
+        print("type \"print\" to print the function or type \"return\" to return the function.")
 
 
 def caluculator():
@@ -42,81 +49,97 @@ def table_maker():
 
 
 def generate_password():
+    # importing modules
     import random
 
+    # varibles of different characters
     lowercase_alphabets = "abcdefghijklmnopqrstuvwxyz"
     uppercase_alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     numbers = "0123456789"
     symbols = "!@#$%^&*()_-+=\"{ }'[]:;\<>,.?/"
+
+    # other varibles for generating password
     index = 0
     password = ""
+    character_range = 0
+
+    # Merge all the characters into one list
     all_characters = list(lowercase_alphabets + uppercase_alphabets + numbers + symbols)
-    character_range = int(input("Character range for password (limitations from 29): "))
+
+    # asking the user for character limit and generating the output
+    character_range = int(input("Character range for password (limitations from 30) : "))
 
     while index < character_range:
-        password = password + all_characters[random.randint(0, len(all_characters))]
+        try:
+            password = password + all_characters[random.randint(0, len(all_characters))]
+        except IndexError:
+            print("Character limit is below 30.")
+            exit()
+        
         index += 1
-
+    
     print("Your password is:", password)
 
 
-def random_joke():
+def random_joke(pera):
     import random
 
     list_of_jokes = [
-        "Why don't scientists trust atoms? Because they make up everything!",
-        "I used to be a baker, but I couldn't make enough dough.",
-        "Why did the scarecrow win an award? Because he was outstanding in his field!",
-        "Why don't skeletons fight each other? They don't have the guts.",
-        "What do you call a fish with no eyes? Fsh.",
-        "Why did the tomato turn red? Because it saw the salad dressing!",
-        "How do you organize a space party? You planet!",
-        "I'm reading a book about anti-gravity. It's impossible to put down!",
-        "How does a penguin build its house? Igloos it together.",
-        "Why don't eggs tell jokes? Because they might crack up!",
-        "Why did the bicycle fall over? It was two-tired.",
-        "What's brown and sticky? A stick!",
-        "What did one wall say to the other wall? 'I'll meet you at the corner.'",
-        "Why don't oysters donate to charity? Because they are shellfish.",
-        "Why don't skeletons fight in wars? They don't have the guts!",
-        "What do you call a snowman with a six-pack? An abdominal snowman.",
-        "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
-        "How do you organize a space party? You planet!",
-        "Why don't seagulls fly over the bay? Because then they would be bagels.",
-        "What's orange and sounds like a parrot? A carrot.",
-        "Why did the math book look sad? Because it had too many problems.",
-        "How do you make a tissue dance? You put a little boogie in it.",
-        "Why did the tomato turn red? Because it saw the salad dressing!",
-        "What did one wall say to the other wall? 'I'll meet you at the corner.'",
-        "How do you catch a squirrel? Climb a tree and act like a nut.",
-        "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
-        "How does a penguin build its house? Igloos it together.",
-        "Why don't eggs tell jokes? Because they might crack up!",
-        "What do you call fake spaghetti? An impasta!",
-        "Why did the chicken go to the seance? To talk to the other side.",
-        "What did the grape do when it got stepped on? It let out a little wine.",
-        "Why don't scientists trust atoms? Because they make up everything!",
-        "How does a train eat? It goes chew, chew!",
-        "What's brown and sticky? A stick!",
-        "Why don't skeletons fight each other? They don't have the guts.",
-        "What do you call a fake noodle? An impasta.",
-        "Why don't oysters donate to charity? Because they are shellfish.",
-        "What's orange and sounds like a parrot? A carrot.",
-        "Why did the bicycle fall over? It was two-tired.",
-        "How do you catch a squirrel? Climb a tree and act like a nut.",
-        "Why don't seagulls fly over the bay? Because then they would be bagels.",
-        "What's the best time to go to the dentist? Tooth-hurty!",
-        "Why don't skeletons fight in wars? They don't have the guts!",
-        "What do you call a snowman with a six-pack? An abdominal snowman.",
-        "Why did the math book look sad? Because it had too many problems.",
-        "How do you make a tissue dance? You put a little boogie in it.",
-        "Why did the tomato turn red? Because it saw the salad dressing!",
-        "What did one wall say to the other wall? 'I'll meet you at the corner.'",
-        "How do you catch a squirrel? Climb a tree and act like a nut."
-    ]
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "I used to be a baker, but I couldn't make enough dough.",
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "Why don't skeletons fight each other? They don't have the guts.",
+            "What do you call a fish with no eyes? Fsh.",
+            "Why did the tomato turn red? Because it saw the salad dressing!",
+            "How do you organize a space party? You planet!",
+            "I'm reading a book about anti-gravity. It's impossible to put down!",
+            "How does a penguin build its house? Igloos it together.",
+            "Why don't eggs tell jokes? Because they might crack up!",
+            "Why did the bicycle fall over? It was two-tired.",
+            "What's brown and sticky? A stick!",
+            "What did one wall say to the other wall? 'I'll meet you at the corner.'",
+            "Why don't oysters donate to charity? Because they are shellfish.",
+            "Why don't skeletons fight in wars? They don't have the guts!",
+            "What do you call a snowman with a six-pack? An abdominal snowman.",
+            "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+            "How do you organize a space party? You planet!",
+            "Why don't seagulls fly over the bay? Because then they would be bagels.",
+            "What's orange and sounds like a parrot? A carrot.",
+            "Why did the math book look sad? Because it had too many problems.",
+            "How do you make a tissue dance? You put a little boogie in it.",
+            "Why did the tomato turn red? Because it saw the salad dressing!",
+            "What did one wall say to the other wall? 'I'll meet you at the corner.'",
+            "How do you catch a squirrel? Climb a tree and act like a nut.",
+            "Why did the golfer bring two pairs of pants? In case he got a hole in one.",
+            "How does a penguin build its house? Igloos it together.",
+            "Why don't eggs tell jokes? Because they might crack up!",
+            "What do you call fake spaghetti? An impasta!",
+            "Why did the chicken go to the seance? To talk to the other side.",
+            "What did the grape do when it got stepped on? It let out a little wine.",
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "How does a train eat? It goes chew, chew!",
+            "What's brown and sticky? A stick!",
+            "Why don't skeletons fight each other? They don't have the guts.",
+            "What do you call a fake noodle? An impasta.",
+            "Why don't oysters donate to charity? Because they are shellfish.",
+            "What's orange and sounds like a parrot? A carrot.",
+            "Why did the bicycle fall over? It was two-tired.",
+            "How do you catch a squirrel? Climb a tree and act like a nut.",
+            "Why don't seagulls fly over the bay? Because then they would be bagels.",
+            "What's the best time to go to the dentist? Tooth-hurty!",
+            "Why don't skeletons fight in wars? They don't have the guts!",
+            "What do you call a snowman with a six-pack? An abdominal snowman.",
+            "Why did the math book look sad? Because it had too many problems.",
+            "How do you make a tissue dance? You put a little boogie in it.",
+            "Why did the tomato turn red? Because it saw the salad dressing!",
+            "What did one wall say to the other wall? 'I'll meet you at the corner.'",
+            "How do you catch a squirrel? Climb a tree and act like a nut."
+        ]
 
-    print(list_of_jokes[random.randint(0, len(list_of_jokes)-1)])
-
+    if pera == "print":
+        print(list_of_jokes[random.randint(0, len(list_of_jokes)-1)])
+    elif pera == "return":
+        return list_of_jokes[random.randint(0, len(list_of_jokes)-1)]
 
 def random_equation():
     import random
