@@ -1,4 +1,4 @@
-answer=input("what caluculation want to do? ")
+answer=input("what calculation want to do? ")
 if answer=="addition":
     num1=int(input("first number "))
     num2=int(input("second number "))
@@ -15,3 +15,4 @@ if answer=="division":
     num1=int(input("first number "))
     num2=int(input("second number "))
     print(num1/num2)
+
