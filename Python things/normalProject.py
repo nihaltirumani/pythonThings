@@ -1,2 +1,4 @@
-import playsound
-playsound.playsound("Meow.wav")
+run = True
+
+while run == True:
+    command = input("")
