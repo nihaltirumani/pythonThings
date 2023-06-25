@@ -1,3 +1,7 @@
+# Modules.
+import random
+import time
+
 def split_words(string):
     index = 0
     while index != len(string):
@@ -7,11 +11,9 @@ def split_words(string):
 
 def random_colour_teller(pr):
     if pr == "print":
-        import random
         color=["red","yellow","orange","green","blue","voilet","purple","white","black","cyan","gray","pink","brown","maroon","silver","gold"]
         print(random.choice(color))
     elif pr == "return":
-        import random
         color=["red","yellow","orange","green","blue","voilet","purple","white","black","cyan","gray","pink","brown","maroon","silver","gold"]
         return random.choice(color)
     else:
@@ -49,9 +51,6 @@ def table_maker():
 
 
 def generate_password():
-    # importing modules
-    import random
-
     # varibles of different characters
     lowercase_alphabets = "abcdefghijklmnopqrstuvwxyz"
     uppercase_alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -75,15 +74,12 @@ def generate_password():
         except IndexError:
             print("Character limit is below 30.")
             exit()
-        
         index += 1
     
     print("Your password is:", password)
 
 
 def random_joke(pera):
-    import random
-
     list_of_jokes = [
             "Why don't scientists trust atoms? Because they make up everything!",
             "I used to be a baker, but I couldn't make enough dough.",
@@ -142,10 +138,7 @@ def random_joke(pera):
         return list_of_jokes[random.randint(0, len(list_of_jokes)-1)]
 
 def random_equation():
-    import random
-
     random_number = random.randint(1, 4)
-
     if random_number == 1:
         operator = "+"
     elif random_number == 2:
@@ -188,10 +181,6 @@ def random_equation():
 
 
 def math_quiz():
-    # Importing modules.
-    import random
-    import time
-
     # Varibles.
     index = 1
     operator = ""
@@ -279,8 +268,6 @@ def math_quiz():
 
 
 def random_game_idea():
-    import random
-
     list_of_types0 = ["Cool", "Boring", "Useful"]
     list_of_types1 = ["Input", "Non-input"]
     list_of_types2 = ["AI", "manual"]
@@ -314,3 +301,93 @@ def commander():
             print("Invlid command")
 
 
+
+def practice_my_name():
+    # Varibles.
+    difficulty = None
+    nihal_time = 0
+    nihal = None
+    points = 0
+
+    # Functions.
+    def printsec(str, sec_num):
+        print(str)
+        time.sleep(sec_num)
+
+    def times(times):
+        nonlocal points
+        nonlocal nihal_time
+        while nihal_time < times:
+            nihal = input("")
+            if nihal == "nihal":
+                points += 1
+            elif nihal == "end":
+                quit()
+            else:
+                print("You wrote wrong.")
+            nihal_time += 1
+        print("You got", points, "points.")
+
+    # Introduction.
+    printsec("Welcome to practice my name!", 1)
+    printsec("My name is nihal.", 1)
+    printsec("In this game, you have to write my name.", 1)
+    printsec("With no mistakes.", 1)
+    printsec("If you want end in the middle of the game, just write \"end\"", 1)
+    printsec("There are three types of difficulties:", 1)
+    printsec("1.Easy = 25 times.", 1)
+    printsec("2.Medium = 50 times.", 1)
+    printsec("1.Hard = 100 times.", 1)
+    printsec("So, good luck.", 1)
+
+    # Selecting difficulties.
+    print("Choose your difficulty:\n1.Easy\n2.Medium\n3.Hard")
+
+    difficulty = input("")
+
+    if difficulty.lower() == "easy":
+        times(25)
+    if difficulty.lower() == "medium":
+        times(50)
+    if difficulty.lower() == "hard":
+        times(100)
+
+
+def printsec(str, sec_num):
+    print(str)
+    time.sleep(sec_num)
+
+
+def guess_the_number():
+    # Variables.
+    random_number = 0
+    user_number = 0
+    trys = 0
+
+    # Introduction.
+    printsec("Welcome to guess the number!.", 1)
+    printsec("A random number is chosen.", 1)
+    printsec("You have to guess the number.", 1)
+    printsec("So, get ready in...", random.random() + random.random())
+    print("NOW!!")
+
+    # Game loop.
+    def repeat():
+        nonlocal trys
+        user_number = int(input("Enter your number: "))
+
+        if user_number == random_number:
+            print("You won!")
+            print("The correct answer is", random_number)
+            print("You did", trys, "trys")
+        elif user_number > random_number:
+            print("Your guessed number is above.")
+            trys += 1
+            repeat()
+        elif user_number < random_number:
+            print("Your guessed number is below.")
+            trys += 1
+            repeat()
+
+    random_number = random.randint(1, 100)
+    repeat()
