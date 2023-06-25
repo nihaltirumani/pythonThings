@@ -1,8 +1,11 @@
+# Introduction.
 print("Welcome to commander. Type commands to make an action. Type \'help\" for more.")
 
+# Varibles.
 run = True
 command_list = ["help", "end", "print"]
 
+# Processer.
 while run:
     command = input("")
     if command in command_list:
