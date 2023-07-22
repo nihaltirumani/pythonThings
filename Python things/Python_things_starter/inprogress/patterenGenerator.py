@@ -40,6 +40,7 @@ def pattern_generator():
         nonlocal innerIndex
         nonlocal bundle
         nonlocal random_picker
+
         if pattern_type == "stars":
             rows_and_columns()
             while outerIndex < rows + 1:
@@ -65,6 +66,7 @@ def pattern_generator():
                 pattern_type = "1and0"
             elif random_picker == 3:
                 pattern_type = "X"
+                
             rows = 0
             columns = 0
             check_pattern_types()
