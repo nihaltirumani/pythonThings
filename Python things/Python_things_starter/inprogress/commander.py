@@ -1,5 +1,5 @@
 # Introduction.
-print("Welcome to commander. Type commands to make an action. Type \'help\" for more.")
+print("Welcome to commander. Type commands to make an action. Type \"help\" for more.")
 
 # Varibles.
 run = True

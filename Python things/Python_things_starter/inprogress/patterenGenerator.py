@@ -26,7 +26,6 @@ def pattern_generator():
                 rows = random.randint(10,50)
                 columns = random.randint(10,50)
         except ValueError:
-            pass
             print("Enter only numeric values.")
             exit()
 
@@ -44,7 +43,7 @@ def pattern_generator():
         if pattern_type == "stars":
             rows_and_columns()
             while outerIndex < rows + 1:
-                print("*"*columns)
+                print("*" * columns)
                 outerIndex += 1
             outerIndex = 1
         elif pattern_type == "1and0":
@@ -57,7 +56,12 @@ def pattern_generator():
                 outerIndex += 1
                 bundle = ""
         elif pattern_type == "X":
-            print("X")
+            rows_and_columns()
+            while outerIndex < rows + 1 :
+                print( "*" + (" " * abs((columns -  (outerIndex * 2)))) + "*")
+                outerIndex += 1
+            outerIndex = 1
+            # Random pattern.
         elif pattern_type == "random":
             random_picker = random.randint(1,3)
             if random_picker == 1:
@@ -79,7 +83,7 @@ def pattern_generator():
 
     # prints the types of patterns are there.
     if pattern_type == "help":
-        print("Pattern types: stars, 1and0, random")
+        print("Pattern types: stars, 1and0, random, X")
         print("Note: Type the command exactly.")
         pattern_type = input("What pattern type do you want? ")
         check_pattern_types()
