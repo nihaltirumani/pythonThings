@@ -1,6 +1,7 @@
 def pattern_generator():
     # Importing modules.
     import random
+    import math
 
     # Variables.
     outerIndex = 1
@@ -58,7 +59,7 @@ def pattern_generator():
         elif pattern_type == "X":
             rows_and_columns()
             while outerIndex < rows + 1 :
-                print( "*" + (" " * abs((columns -  (outerIndex * 2)))) + "*")
+                print("*" + (" " * abs((columns -  (outerIndex * 2)))) + "*")
                 outerIndex += 1
             outerIndex = 1
             # Random pattern.
