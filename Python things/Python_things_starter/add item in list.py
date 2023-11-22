@@ -11,7 +11,7 @@ def add_item(type, item):
         item = float(item)
         print("float")
     print(item)
-    my_list.insert(0, item)
+    my_list.append(item)
 type_ = input("What type? ")
 item_ = input("What item? ")
 add_item(type_, item_)
