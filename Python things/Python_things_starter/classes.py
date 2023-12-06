@@ -9,7 +9,7 @@ class person:
         return self.name, self.age, self.person_id
     
     def introduction_person(self):
-        print(f"Hi, I am {self.name} and I am {self.age} years old. My occupation is {self.occupation} My ID is {self.person_id}.")
+        print(f"Hi, I am {self.name} and I am {self.age} years old. My occupation is {self.occupation}. My ID is {self.person_id}.")
 
     def get_more_info(self, hobbies, fav_food, fav_sport):
         self.hobbies = hobbies
@@ -25,8 +25,8 @@ class person:
         else:
             print(f"No more information about {self.name}.")
 
-person1 = person("Nihal", 11, 1025)
-person2 = person("Varun", 11, 1079)
+person1 = person("Nihal", 11,"student", 1025)
+person2 = person("Varun", 11, "student", 1079,)
 person1.introduction_person()
 person2.introduction_person()
 person1.get_more_info("playing key board", "pizza", "Basketball")

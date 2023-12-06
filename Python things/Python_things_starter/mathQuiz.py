@@ -61,6 +61,7 @@ while index < 11:
         user_answer = int(input(question))
     except ValueError:
         print("Enter a number, not letters")
+        print("Please try again.")
         quit()
     
     # Checking if the user answer is right or not.
