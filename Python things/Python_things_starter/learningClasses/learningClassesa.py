@@ -27,8 +27,8 @@ class person:
 
 person1 = person("Nihal", 11,"student", 1025)
 person2 = person("Varun", 11, "student", 1079,)
+person1.get_more_info("playing key board", "pizza", "Basketball")
 person1.introduction_person()
 person2.introduction_person()
-person1.get_more_info("playing key board", "pizza", "Basketball")
 person1.more_info()
 person2.more_info()

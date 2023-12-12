@@ -1,6 +1,6 @@
 # Importing varibles.
 import random
-import nMods as n
+import modules.nMods as n
 
 # Variables.
 random_number = 0

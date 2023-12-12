@@ -20,14 +20,16 @@ def makeq(question, answer):
     if user_answer.lower() == answer:
         survey_score += 1
     
-#questions #neeeeeed to maaaaaaaake more queeeeeeesssttttttttttttttttttttttttttttions
+#questions
 makeq("Do you like python?", "yes")
-makeq("What Python module do you like?", "pygame")
 makeq("Do you like making games?", "yes")
 makeq("What color do you like?", "yellow")
-makeq("What is your favourite number?", "2")
-makeq("What is your favourite subject?", "maths")
 makeq("Do you like to eat curd?", "yes")
+makeq("What is your favourite number?", "2")
+makeq("What is the most irritating thing in Python?", "classes")
+makeq("What is your favourite subject?", "maths")
+makeq("What is your fovourite sport?", "basketball")
+makeq("What Python module do you like?", "pygame")
 
 #result
 nihalishPercentage = str(round((survey_score / question_no) * 100)) + "%"
