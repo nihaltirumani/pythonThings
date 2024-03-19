@@ -1,7 +1,6 @@
 def pattern_generator():
     # Importing modules.
     import random
-    import math
 
     # Variables.
     outerIndex = 1
@@ -12,6 +11,7 @@ def pattern_generator():
     rows = 0
     columns = 0
     random_picker = 0
+    space_list = []
 
     # Function to ask for rows and columns.
     def rows_and_columns():
@@ -56,10 +56,14 @@ def pattern_generator():
                 print(bundle)
                 outerIndex += 1
                 bundle = ""
-        elif pattern_type == "X":
+        elif pattern_type.lower() == "x":
             rows_and_columns()
-            while outerIndex < rows + 1 :
-                print("*" + (" " * abs((columns -  (outerIndex * 2)))) + "*")
+            for i in range(rows):
+                space_list.append(abs((columns - (i * 2))))
+            #space_list.pop(0)
+            print(space_list)    
+            for i1 in range(rows):
+                print((" " * space_list[5+i1]) + "*" + (" " * (space_list[i1] * 2)) + "*")
                 outerIndex += 1
             outerIndex = 1
             # Random pattern.
@@ -91,4 +95,5 @@ def pattern_generator():
 
     check_pattern_types()
 
-pattern_generator()
+if __name__ == "__main__":
+    pattern_generator()

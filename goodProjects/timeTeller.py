@@ -30,7 +30,7 @@ def extract_time():
 extract_time()
 
 answer = input("Ask about time: ")
-
+print(part_list)
 if answer == "what year is it?":
     print(part_list[0])
 if answer == "what time is it?":
