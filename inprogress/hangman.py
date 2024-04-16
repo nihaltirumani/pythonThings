@@ -89,3 +89,4 @@ while chances > 0:
         quit()
 
 print("You lost the game!")
+print(f"It's {main_word}")

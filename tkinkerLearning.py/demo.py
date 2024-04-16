@@ -3,7 +3,6 @@ import tkinter as tk
 import ttkbootstrap as ttk
 
 def add():
-    error = None
     try:
         number1 = int(entry_int1.get())
         number2 = int(entry_int2.get())
