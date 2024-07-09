@@ -1,0 +1,12 @@
+{
+error with invalid user input contains a
+error with invalid user input contains a
+error with invalid user input contains a
+error with invalid user input contains a
+error with invalid user input contains s
+error with invalid user input contains d
+error with invalid user input contains f
+state = True
+state = False
+program ended
+}

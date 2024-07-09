@@ -3,7 +3,7 @@ from tkinter import ttk
 
 def button_func():
     print(stringVar.get())
-    stringVar.get("Button pressed!")
+    stringVar.set("Button pressed!")
 
 # window
 window = tk.Tk()

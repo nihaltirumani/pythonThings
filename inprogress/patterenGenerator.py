@@ -1,3 +1,4 @@
-#-RIP PATTERN GENERETOR 2023-2024
-#--New model will be coming soon....
-#---Until then, COFFIN DANCE!!!!
+# need what: 
+# square!!!!!!, 1and0 and  THE FINAL: X
+# colums and rows
+# Adavanced coding

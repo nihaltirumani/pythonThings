@@ -16,6 +16,10 @@ while not index == len(message):
         decyption_key = decyption_key + str(randomiser)
         encrypted_message = encrypted_message + alphabet_list[(alphabet_list.index(message[index]) + randomiser) % 26]
         index += 1
+    elif message[index] == " ":
+        decyption_key = decyption_key + "0"
+        encrypted_message = encrypted_message + alphabet_list[random.randint(0, 25)]
+        index += 1
     else:
         index += 1
 

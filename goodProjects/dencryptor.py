@@ -8,7 +8,12 @@ encrypted_message = input("Enter encrypted message: ")#"ropft"
 decryption_key = input("Enter decryption key: ")#'46858'
 
 while not index == len(encrypted_message):
-    decrypted_message = decrypted_message + alphabet_list[int(alphabet_list.index(encrypted_message[index]) - int(decryption_key[index]))]
-    index += 1
+    decrypted_letter = alphabet_list[int(alphabet_list.index(encrypted_message[index]) - int(decryption_key[index]))]
+    if decryption_key[index] != "0":
+        decrypted_message = decrypted_message + decrypted_letter
+        index += 1
+    elif decryption_key[index] == "0":
+        decrypted_message = decrypted_message + " "
+        index += 1
 
 print("Decrypted message:", decrypted_message)

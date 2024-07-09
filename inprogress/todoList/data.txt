@@ -1,0 +1,9 @@
+/
+Python work
+This work needed to do urgently
+/
+<
+Commander file thingy
+Need to fix hang man
+Pattern generator remake
+>

@@ -32,8 +32,9 @@ def ask_letter():
     elif letter == " ":
          print("Please give any letter to play the game.")
          ask_letter()
-    tries += 1
-    letter = letter[0]
+    else:
+        tries += 1
+        letter = letter[0]
 
 def replace_letter(string, index, new_letter):
     before = string[:index]
