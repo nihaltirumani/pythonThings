@@ -12,7 +12,7 @@ def b102(number): # changes the variable binarynumber only not returns
 
 
 def b210(number): # changes the variable decimalnumber only not returns
-    global decimalnumber
+    global decimalnumber, binarynumber
     for i in range(0,len(binarynumber)): 
         decimalnumber = decimalnumber + (int(binarynumber[i]) * pow(2,i))
 
@@ -21,7 +21,9 @@ if userinput.lower() == "1":
     number = int(input("Decimal Number: "))
     b102(number)
     print(binarynumber[::-1])
-elif userinput.lower == "2":
-    number = int(input("Binary Number: "))
 
-print(decimalnumber)
+elif userinput.lower() == "2":
+    binarynumber = str(input("Binary Number: "))[::-1]
+    
+    b210(decimalnumber)
+    print(decimalnumber)
