@@ -1,17 +1,22 @@
 # Importing varibles.
 import random
-import modules.nMods as n
+import time
 
 # Variables.
 random_number = 0
 user_number = 0
 trys = 0
 
-# Introduction.
-n.printsec("Welcome to guess the number!.", 1)
-n.printsec("A random number is chosen.", 1)
-n.printsec("You have to guess the number.", 1)
-n.printsec("So, get ready in...", random.random() + random.random())
+# definitions
+def printsec(str, sec):
+    print(str)
+    time.sleep(sec)
+    
+# Introduction
+printsec("Welcome to guess the number!.", 1)
+printsec("A random number is chose", 1)
+printsec("You have to guess the number.", 1)
+printsec("So, get ready i..", random.random() + random.random())
 print("NOW!!")
 
 # Game loop.
