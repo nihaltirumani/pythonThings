@@ -5,8 +5,6 @@ import time
 # Varibles.
 index = 1
 operator = ""
-num1 = ""
-num2 = ""
 random_number = 0
 question = ""
 answer = ""
@@ -14,6 +12,8 @@ user_answer = ""
 correct_answers = 0
 
 # Greeting the user and explaining about the game.
+# removed beacause it takes
+"""
 print("Welcome to maths quiz!")
 time.sleep(1)
 print("There are ten equations.")
@@ -31,12 +31,16 @@ time.sleep(1)
 print("1")
 time.sleep(1)
 print("Go!")
+"""
 
 # Game engine.
 while index < 11:
 
     # Generating a random operator.
     random_number = random.randint(1, 4)
+
+    num1 = random.randint(1, 25)
+    num2 = random.randint(1, 25)
 
     if random_number == 1:
         operator = "+"
@@ -45,12 +49,12 @@ while index < 11:
     elif random_number == 3:
         operator = "*"
     elif random_number == 4:
+        num1 = random.randint(10, 30)
+        num2 = random.randint(1,5)
         operator = "/"
     
     # Generating the question.
-    num1 = str(random.randint(1, 25))
-    num2 = str(random.randint(1, 25))
-    question = "Answer the equation: " + num1 + " " + operator + " " + num2 + " " + "=" + " "
+    question = "Answer the equation: " + str(num1) + " " + operator + " " + str(num2) + " " + "=" + " "
     
     # Asking the user to answer.
     num1 = int(num1)
