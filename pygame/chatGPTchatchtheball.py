@@ -13,7 +13,7 @@ black = (0, 0, 0)
 red = (255, 0, 0)
 
 player_width, player_height = 50, 50
-player_x = (width - player_width) // 2
+player_x = width - player_width // 2
 player_y = height - player_height - 20
 player_speed = 10
 
