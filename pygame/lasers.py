@@ -7,7 +7,7 @@ def draw_laser(
     color3: tuple,
     pos1: tuple,
     pos2: tuple,
-    size: float
+    size: float,
     ):
 
     pygame.draw.line(trans_surf, color1, pos1, pos2, size * 20)

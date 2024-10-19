@@ -62,7 +62,7 @@ while True:
 
     # Uses rect method to draw a slider except the slider button which uses ellipse method to draw.
     pygame.draw.rect(screen, "white", (90, 80, 40, 340), border_radius = 20) # slider1 rect (outer part)
-    filling_height = (100, slider1.centery, 20, 310 - (slider1.centery - (restrisction1 + 7)))
+    filling_height = (100, slider1.centery, 20, 310 - (slider1.centery - restrisction1_slider1))
     pygame.draw.rect(screen, "#4664fa", filling_height, border_radius = 12) # slider1 rect (filled part)
     pygame.draw.ellipse(screen, "#3858fc", slider1) # slider1 button
 
