@@ -1,7 +1,7 @@
 import pygame 
 from sys import exit
 
-class laser():
+class Laser():
     def __init__(self, color, pos1, pos2, size, screen):
         self.color = color
         self.pos1 = pos1
@@ -29,7 +29,7 @@ screen = pygame.display.set_mode((600, 600))
 pygame.display.set_caption("Lasers")
 clock = pygame.time.Clock()
 
-laser1 = laser((255, 0, 0, 255), (0,0), (600, 600), 1, screen)
+laser1 = Laser((255, 0, 0, 255), (0,0), (600, 600), 1, screen)
 
 while True:
     for event in pygame.event.get():

@@ -10,9 +10,6 @@ def draw_partcles(particle_list):
             #particle[3] *= 0.98
             particle[0] += particle[3]
 
-            if particle[1] > 790:
-                particle[1] = 790
-
             pygame.draw.circle(screen, particle[4], (particle[0], particle[1]), particle[5])
 
             particle_list = [particle for particle in particle_list if particle[1] < 789]
