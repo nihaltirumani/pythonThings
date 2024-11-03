@@ -1,7 +1,6 @@
 # Importing modules
 import random
 
-
 # Varibles of different characters
 
 lowercase_alphabets = "abcdefghijklmnopqrstuvwxyz"
@@ -14,7 +13,6 @@ symbols = "!@#$%^&*()_-+=\"{ }'[]:;\<>,.?/"
 
 index = 0
 password = ""
-
 
 # Merge all the characters into one list
 
