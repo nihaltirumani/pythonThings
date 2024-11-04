@@ -18,7 +18,7 @@ if encryption_or_decryption == "1":
 
     for i in range(len(message)):
         if message[index] in alphabet_list: 
-            randomiser = random.randint(1, 99)
+            randomiser = random.randint(2, 99)
             encrypted_message += f"{randomiser:02}"
             encrypted_message += alphabet_list[(alphabet_list.index(message[index]) + randomiser) % 26]
             index += 1
