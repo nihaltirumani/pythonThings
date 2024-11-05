@@ -10,3 +10,22 @@ state = True
 state = False
 program ended
 }
+{
+error with invalid user input contains set on
+error with invalid user input contains set 1
+error with invalid user input contains 1
+error with invalid user input contains 1
+error with invalid user input contains 0
+error with invalid user input contains state 1
+error with invalid user input contains help
+error with invalid user input contains I don't know. I'm new here
+state = True
+state = False
+state = False
+state = False
+state = True
+print(state)
+state = False
+print(state)
+program ended
+}
