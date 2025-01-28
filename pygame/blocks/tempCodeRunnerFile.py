@@ -1,1 +1,0 @@
-screen.blit(wood, (100, 100))
