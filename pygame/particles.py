@@ -2,7 +2,7 @@ import pygame
 from sys import exit
 from random import randint
 
-def draw_partcles(particle_list):
+def draw_particles(particle_list):
     if particle_list:
         for particle in particle_list:
             particle[2] += 1
@@ -38,7 +38,7 @@ while True:
         for i in range(1):
             particles.append([event.pos[0], event.pos[1], randint(-18, -5), randint(-10, 10), (randint(0, 255), randint(0, 255), randint(0, 255)), randint(8, 13)])
 
-    particles = draw_partcles(particles)
+    particles = draw_particles(particles)
     
     pygame.display.update()
     clock.tick(60)

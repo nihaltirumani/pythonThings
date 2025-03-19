@@ -22,6 +22,6 @@ if user > 3:
 user =  state[user - 1]
 
 print(f"You choose: {user}")
-print(f"AI choose: {ai}")
+print(f"Computer choose: {ai}")
 
 win()

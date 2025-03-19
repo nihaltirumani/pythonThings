@@ -4,7 +4,7 @@ from sys import exit
 pygame.init()
 
 screen = pygame.display.set_mode((800, 400))
-pygame.display.set_caption("Base Code")
+pygame.display.set_caption("Base code")
 clock = pygame.time.Clock()
 
 while True:
