@@ -12,7 +12,7 @@ class Particle:
             for particle in self.particles:
                 particle[3] += 1
                 particle[1] += particle[3]
-                #particle[3] *= 0.98
+                particle[3] *= 0.98
                 particle[0] += particle[2]
                 pygame.draw.circle(screen, particle[4], (particle[0], particle[1]), particle[5])
 
