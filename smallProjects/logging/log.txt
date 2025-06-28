@@ -29,3 +29,12 @@ state = False
 print(state)
 program ended
 }
+{
+state = True
+state = False
+state = False
+state = False
+error with invalid user input contains stae
+print(state)
+program ended
+}

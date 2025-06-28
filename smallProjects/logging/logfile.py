@@ -6,7 +6,7 @@ print("Note: the command will be noted on the log.txt file")
 running = True
 user_input = ""
 state = None
-file = open("/Users/nihalTirumani/Desktop/pythonThings/smallProjects/logging/log.txt", "a")
+file = open("smallProjects/logging/log.txt", "a")
 
 file.write("{\n")
 while running:
