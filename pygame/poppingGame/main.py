@@ -90,7 +90,6 @@ class Balloon:
         self.balloon = pygame.transform.scale_by(self.balloon, 0.4)
         screen.blit(self.balloon, self.balloon_rect)
 
-
 def create_ballons():
     global grid, balloons
     grid = [randint(0,3) for i in range(SIDE ** 2)]
@@ -106,6 +105,8 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Balloons Popping game")
 clock = pygame.time.Clock()
 font1 = pygame.font.Font("pygame/poppingGame/Assets/font/LuckiestGuy-Regular.ttf", 50)
+font2 = pygame.font.Font("pygame/poppingGame/Assets/font/LuckiestGuy-Regular.ttf", 150)
+font3 = pygame.font.Font("pygame/poppingGame/Assets/font/LuckiestGuy-Regular.ttf", 160)
 
 types = ["red", "blue", "green", "yellow", "pop"]
 grid = []
@@ -114,11 +115,18 @@ balloons_empty = [None for i in range(SIDE ** 2)]
 create_ballons()
 
 points = 0
+end_game_count = 0
 
 dart_ = Dart(200, 300)
 
-text1 = font1.render(f"Points: {points}", True, "black")
+text1 = font1.render(f"Points: {points}", True, "green")
 text1_rect = text1.get_rect(topleft = (10, 10))
+
+text2 = font3.render(f"YOU WON!", True, "green")
+text2_rect = text2.get_rect(center = (WIDTH / 2, HEIGHT / 2))
+
+text3 = font2.render(f"YOU WON!", True, "green")
+text3_rect = text3.get_rect(center = (WIDTH / 2, HEIGHT / 2))
 
 pop = pygame.mixer.Sound("pygame/poppingGame/Assets/sounds/pop.wav")
 
@@ -134,6 +142,13 @@ while True:
     mouse = pygame.mouse.get_pressed()
 
     keys = pygame.key.get_pressed()
+
+    if balloons == balloons_empty:
+        end_game_count += 1
+
+        if end_game_count >= 60:
+            pygame.quit()
+            exit()
 
     for bloon in balloons:
         if bloon != None:
@@ -162,12 +177,20 @@ while True:
         if dart_.throw == 0 and bloon != None:
             bloon.popped = False
 
-        
     dart_.update()
 
     text1 = font1.render(f"Points: {points}", True, "black")
     text1_rect = text1.get_rect(topleft = (10, 10))
     screen.blit(text1, text1_rect)
+
+    if balloons == balloons_empty: 
+        text2 = font3.render(f"YOU WON!", True, "chartreuse4")
+        text2_rect = text2.get_rect(center = (WIDTH / 2, HEIGHT / 2))
+        screen.blit(text2, text2_rect)
+
+        text2 = font2.render(f"YOU WON!", True, "chartreuse3")
+        text2_rect = text2.get_rect(center = (WIDTH / 2, HEIGHT / 2))
+        screen.blit(text2, text2_rect)
 
     pygame.display.update()
     clock.tick(60)
